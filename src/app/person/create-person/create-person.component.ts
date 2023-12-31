@@ -18,23 +18,11 @@ export class CreatePersonComponent implements OnInit {
   // @ts-ignore
   person: Person = new Person();
 
-  // @Input() person: Person;
-
   constructor(private personService: PersonService,
               private router: Router) {
   }
 
   ngOnInit(): void {
-  }
-
-  savePerson() {
-    this.personService.createPerson(this.person).subscribe({
-      next: data => {
-        console.log(data);
-        this.goToPersonList();
-      },
-      error: err => console.log(err)
-    })
   }
 
   goToPersonList() {
@@ -50,7 +38,5 @@ export class CreatePersonComponent implements OnInit {
       },
       error: err => console.log(err)
     })
-    // console.log(this.person);
-    // this.savePerson();
   }
 }

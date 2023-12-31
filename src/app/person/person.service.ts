@@ -15,7 +15,7 @@ export class PersonService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getPersonsList(): Observable<Person[]> {
+  getPersonList(): Observable<Person[]> {
     return this.httpClient.get<Person[]>(`${this.BASE_URL}/all`);
   }
 

@@ -1,0 +1,28 @@
+<div class="row mt-3">
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+    <div class="row">
+      <h3 class="text-center">Обновить данные {{post.title}}</h3>
+      <hr />
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <label>Должность</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="post.title"
+                   name="title">
+          </div>
+
+          <div class="form-group">
+            <label>Примечание</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="post.description"
+                   name="description">
+          </div>
+
+          <br />
+          <button class="btn btn-success" type="submit">Обновить</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

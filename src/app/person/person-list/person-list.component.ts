@@ -26,13 +26,17 @@ export class PersonListComponent implements OnInit {
   }
 
   private getPersons() {
-    this.personService.getPersonsList().subscribe(data => {
+    this.personService.getPersonList().subscribe(data => {
       this.persons = data;
     })
   }
 
   personDetails(uuid: string | undefined) {
     this.router.navigate(['person-details', uuid]);
+  }
+
+  createPerson(){
+    this.router.navigate(['/create-person']);
   }
 
   updatePerson(person: Person) {

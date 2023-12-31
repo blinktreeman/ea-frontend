@@ -28,9 +28,6 @@ export class PersonDetailsComponent implements OnInit {
       },
       error: err => console.log(err)
     })
-    // this.personService.getPersonById(this.uuid).subscribe(data => {
-    //   this.person = data;
-    // });
   }
 
 }

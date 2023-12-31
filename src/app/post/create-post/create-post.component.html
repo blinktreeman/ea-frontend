@@ -1,0 +1,36 @@
+<div class="row mt-3">
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+    <div class="row">
+      <h3 class="text-center">Добавить должность</h3>
+      <hr/>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #postForm="ngForm">
+
+          <div class="form-group">
+            <label>Наименование должности</label>
+            <input type="text" [(ngModel)]="post.title"
+                   class="form-control"
+                   id="title"
+                   name="title"
+                   required #title="ngModel">
+          </div>
+          <div [hidden]="!title.pristine" class="alert alert-danger">Поле является обязательным</div>
+
+          <div class="form-group">
+            <label>Примечание</label>
+            <input type="text" [(ngModel)]="post.description"
+                   class="form-control"
+                   id="description"
+                   name="description">
+          </div>
+
+          <br/>
+          <button type="submit" [disabled]="!postForm.form.valid"
+                  class="btn btn-success">Добавить
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

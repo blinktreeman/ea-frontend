@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mt-3">
   <h2>Список персон</h2>
 </div>
 
@@ -11,6 +11,7 @@
     <th>Отчество</th>
     <th>Возраст</th>
     <th>Примечание</th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
@@ -23,9 +24,13 @@
     <td> {{ person.description }} </td>
     <td>
       <button (click)="personDetails(person.uuid)" class="btn btn-primary btn-sm">Просмотреть</button>
-      <button (click)="updatePerson(person)" class="btn btn-secondary btn-sm" style="margin-left: 10px">Обновить</button>
+      <button (click)="updatePerson(person)" class="btn btn-secondary btn-sm" style="margin-left: 10px">Изменить</button>
       <button (click)="deletePerson(person.uuid)" class="btn btn-danger btn-sm" style="margin-left: 10px">Удалить</button>
     </td>
   </tr>
   </tbody>
 </table>
+
+<div>
+  <button (click)="createPerson()" class="btn btn-primary btn-sm">Добавить</button>
+</div>
