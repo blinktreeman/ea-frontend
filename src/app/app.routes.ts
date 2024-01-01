@@ -8,8 +8,12 @@ import {CreatePostComponent} from "./post/create-post/create-post.component";
 import {UpdatePostComponent} from "./post/update-post/update-post.component";
 import {PostDetailsComponent} from "./post/post-details/post-details.component";
 import {PostListComponent} from "./post/post-list/post-list.component";
+import {EmployeeListComponent} from "./employee/employee-list/employee-list.component";
+import {EmployeeDetailsComponent} from "./employee/employee-details/employee-details.component";
 
 export const routes: Routes = [
+  // Home
+  {path: 'home', component: HomePageComponent},
   // Person
   {path: 'persons', component: PersonListComponent},
   {path: 'create-person', component: CreatePersonComponent},
@@ -20,8 +24,9 @@ export const routes: Routes = [
   {path: 'create-post', component: CreatePostComponent},
   {path: 'update-post', component: UpdatePostComponent},
   {path: 'post-details/:uuid', component: PostDetailsComponent},
-  // Home
-  {path: 'home', component: HomePageComponent},
+  // Employee
+  {path: 'employees', component: EmployeeListComponent},
+  {path: 'employee-details/:uuid', component: EmployeeDetailsComponent},
 
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];

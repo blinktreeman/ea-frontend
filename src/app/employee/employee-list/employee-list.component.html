@@ -1,0 +1,36 @@
+<div class="row mt-3">
+  <h2>Список работников</h2>
+</div>
+
+<table class="table table-striped table-bordered">
+  <thead>
+  <tr>
+    <th>UUID</th>
+    <th>Персона</th>
+    <th>Должность</th>
+    <th>Дата регистрации</th>
+    <th>Дата последнего изменения</th>
+    <th>Находится в работе</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees">
+    <td> {{ employee.uuid }} </td>
+    <td> {{ employee.person }} </td>
+    <td> {{ employee.post }} </td>
+    <td> {{ employee.createdOn }} </td>
+    <td> {{ employee.updatedOn }} </td>
+    <td> {{ employee.isWorking }} </td>
+    <td>
+      <button (click)="employeeDetails(employee.uuid)" class="btn btn-primary btn-sm">Просмотреть</button>
+<!--      <button (click)="updateEmployee(employee)" class="btn btn-secondary btn-sm" style="margin-left: 10px">Изменить</button>-->
+      <button (click)="deleteEmployee(employee.uuid)" class="btn btn-danger btn-sm" style="margin-left: 10px">Удалить</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div>
+<!--  <button (click)="createEmployee()" class="btn btn-primary btn-sm">Добавить</button>-->
+</div>

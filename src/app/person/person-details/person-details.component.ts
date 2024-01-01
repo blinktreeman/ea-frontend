@@ -29,5 +29,4 @@ export class PersonDetailsComponent implements OnInit {
       error: err => console.log(err)
     })
   }
-
 }
